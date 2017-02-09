@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Tamagotchi</title>
+</head>
+<body>
+    {% if tama_gs is not empty %}
+    <p>Enter name here:</p>
+    <ul>
+        {% for tama_g in tama_gs %}
+            <li>{{ tama_g.getName }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+
+    <form action="/name" method="post">
+        <label for="name">Give your Tamagotchi a name:</label>
+        <input id='name' name='name' type='text'>
+        <button type="submit">Enter</button>
+    </form>
+</body>
+</html>

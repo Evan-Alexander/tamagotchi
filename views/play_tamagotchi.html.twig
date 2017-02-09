@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title> </title>
+</head>
+<body>
+    {% if Tamagotchi is not empty %}
+    <p>Enter name here:</p>
+    <ul>
+        {% for Tamagotchi in Tamagotchis %}
+            <li>{{ tama_g.getName }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html
